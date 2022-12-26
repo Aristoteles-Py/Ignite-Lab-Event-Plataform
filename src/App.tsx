@@ -7,11 +7,11 @@ import Rotas from "./Rotas";
 function App() {
   return (
     <>
-    <ApolloProvider client={client}>
-      <BrowserRouter>
-        <Rotas/>
-      </BrowserRouter>
-    </ApolloProvider>
+      <ApolloProvider client={client}>
+        <BrowserRouter>
+          <Rotas/>
+        </BrowserRouter>
+      </ApolloProvider>
     </>
   )
 }
