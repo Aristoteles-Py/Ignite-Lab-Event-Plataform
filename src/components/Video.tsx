@@ -3,6 +3,9 @@ import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-reac
 import { gql, useQuery } from "@apollo/client";
 
 
+import ReactPlayer from 'react-player'
+
+
 
 const GET_LESSON_BY_SLUG_QUERY = gql `
     query GetLessonBySlug ($slug: String) {
@@ -52,6 +55,12 @@ function Video (props: VideosProps) {
         <div className="flex-1">
             <div className="bg-black flex justify-center">
                 <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
+                    <ReactPlayer 
+                    url={`https://www.youtube.com/watch?v=${data.lesson.videoId}`}
+                    width='100%'
+                    height='100%' 
+                    controls
+                    />
                     
                 </div>
             </div>
