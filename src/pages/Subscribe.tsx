@@ -32,10 +32,14 @@ function Subscriber(){
     }
 
     return(
-        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-            <div className="flex  w-full max-w-[1100px] justify-between items-center mt-20 max-auto ">
-                <div className="max-w-[648px]">
-                    <Logo/>
+        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center  max-flex">
+
+            <div className="flex w-full max-w-[1100px] justify-between items-center mt-20 max-auto max-md:flex-col ">
+                <div className="max-w-[648px] max-md:text-center max-md:flex max-md:flex-col max-md:justify-center">
+                    <div className="max-md:justify-center max-md:w-full max-md:flex">
+                        <Logo/> 
+                    </div>
+                    
                     <h1 className="mt-8 text-[2.5rem] leading-tight">
                         Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com <strong  className="text-blue-500">React</strong>
                     </h1>
@@ -43,7 +47,8 @@ function Subscriber(){
                         Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.
                     </p>
                 </div>
-                <div className="p-8 bg-gray-700 border border-gray-500 rounded">
+
+                <div className="p-8 bg-gray-700 border border-gray-500 rounded max-md:w-full max-md:mt-5">
                     <strong className="text-2xl ab-6 block">
                         Inscreva-se gratuitamente
                     </strong>
@@ -69,7 +74,7 @@ function Subscriber(){
                     </button>
 
                     </form>
-                </div>
+                </div> 
             </div>
             <img src="src/assets/Group.png" className="mt-10" alt=""/>
         </div>

@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.2",
+    "@apollo/client": "^3.7.3",
     "@vidstack/player": "^1.6.5",
     "date-fns": "^2.29.3",
     "graphql": "^16.6.0",

@@ -1,5 +1,5 @@
 
-import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-react";
+import { CaretRight, DiscordLogo, FileArrowDown, Image, Lightning } from "phosphor-react";
 import { gql, useQuery } from "@apollo/client";
 
 
@@ -65,7 +65,7 @@ function Video (props: VideosProps) {
                 </div>
             </div>
             <div className="p-8 max-w-[1100px] mx-auto">
-                <div className="flex items-start gap-16">
+                <div className="flex items-start gap-16 max-md:flex-col max-md:items-center">
                     <div className="flex-1">
                         <h1 className="text-2xl font-bold">
                             {data.lesson.title}
@@ -91,7 +91,7 @@ function Video (props: VideosProps) {
                         </div>
 
                     </div>
-                    <div  className="flex flex-col gap-4">
+                    <div  className="flex flex-col gap-4 max-md:w-full">
                         <a href="#" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase font gap-2 justify-center hover:bg-green-700 transition-colors">
                             <DiscordLogo size={24}/>Comunidade do Discord
                         </a>
@@ -101,8 +101,8 @@ function Video (props: VideosProps) {
                     </div>
                 </div>
 
-                <div className="gap-8 mt-20 grid grid-cols-2">
-                    <a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
+                <div className="gap-8 mt-20 grid grid-cols-2 max-md:flex max-md:flex-col">
+                    <a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors max-md:h-28">
                         <div className="bg-green-700 h-full p-6 flex items-center">
                             <FileArrowDown size={40}/>
                         </div>
@@ -119,16 +119,16 @@ function Video (props: VideosProps) {
                         </div>
                     </a>
 
-                    <a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
+                    <a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors max-md:h-24">
                         <div className="bg-green-700 h-full p-6 flex items-center">
                             <FileArrowDown size={40}/>
                         </div>
                         <div className="py-6 leading-relaxed">
                             <strong className="text-2xl">
-                                Material Complementar
+                                Wallpaper
                             </strong>
                             <p className="text-sm text-gray-200 leading-relaxed mt-2">
-                                Acesse o material complementar para acelerar o seu desenvolvimento
+                                Download do wallpaper Personalizado do evento
                             </p>
                         </div>
                         <div className="h-full p-6 fle items-center">

@@ -23,12 +23,17 @@ interface GetLessonsQueryResponse {
     }[]
 }
 
-function Sidebar () {
+interface propsmenu{
+    menu: boolean;
+}
+
+function Sidebar ( ) {
 
     const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY)
 
     return(
-        <div className="w-[348px] bg-gray-700 p-6 border-l border-gray-600">
+        <div className="w-[348px] bg-gray-700 p-6 border-l border-gray-600 max-md:absolute max-md:w-full max-md:-mt-[1000px]">
+  
             <span className="font-bold text-2xl pb-6 border-b border-gray-500 block mb-9">
                 Cronograma de aulas
             </span>
