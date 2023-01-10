@@ -1,4 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
+import { useState } from "react";
 import Lesson from "./Lesson";
 
 const GET_LESSONS_QUERY = gql `
@@ -24,16 +25,18 @@ interface GetLessonsQueryResponse {
 }
 
 interface propsmenu{
-    menu: boolean;
+    active: string;
+    hidden: string;
 }
 
-function Sidebar ( ) {
+function Sidebar (props: propsmenu) {
 
     const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY)
+    const [sidebar, setSidebar] = useState(false)
+    const showSidebar = () => setSidebar(!sidebar)
 
     return(
-        <div className="w-[348px] bg-gray-700 p-6 border-l border-gray-600 max-md:absolute max-md:w-full max-md:-mt-[1000px]">
-  
+        <div className={`w-[348px] bg-gray-700 p-6 border-l border-gray-600 ${props.hidden} max-md:absolute max-md:w-full ${props.active}`}>
             <span className="font-bold text-2xl pb-6 border-b border-gray-500 block mb-9">
                 Cronograma de aulas
             </span>

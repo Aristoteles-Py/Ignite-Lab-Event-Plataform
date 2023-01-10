@@ -18,7 +18,7 @@ function Evento () {
                     <div className="flex-1">
                         Criar um component com mensagem escolha uma aula
                     </div>}
-                    <Sidebar/>
+                    <Sidebar active=" " hidden="max-md:hidden"/>
             </main>
         </div>
     )
