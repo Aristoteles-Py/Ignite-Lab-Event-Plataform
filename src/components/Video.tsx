@@ -52,7 +52,7 @@ function Video (props: VideosProps) {
     }
 
     return(
-        <div className="flex-1">
+        <div className="flex-1 max-md:w-full">
             <div className="bg-black flex justify-center">
                 <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
                     <ReactPlayer 
@@ -102,7 +102,7 @@ function Video (props: VideosProps) {
                 </div>
 
                 <div className="gap-8 mt-20 grid grid-cols-2 max-md:flex max-md:flex-col">
-                    <a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors max-md:h-28">
+                    <a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors max-md:h-full">
                         <div className="bg-green-700 h-full p-6 flex items-center">
                             <FileArrowDown size={40}/>
                         </div>
@@ -119,7 +119,7 @@ function Video (props: VideosProps) {
                         </div>
                     </a>
 
-                    <a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors max-md:h-24">
+                    <a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors max-md:h-full">
                         <div className="bg-green-700 h-full p-6 flex items-center">
                             <FileArrowDown size={40}/>
                         </div>
@@ -127,7 +127,7 @@ function Video (props: VideosProps) {
                             <strong className="text-2xl">
                                 Wallpaper
                             </strong>
-                            <p className="text-sm text-gray-200 leading-relaxed mt-2">
+                            <p className="text-sm text-gray-200 leading-relaxed mt-2 ">
                                 Download do wallpaper Personalizado do evento
                             </p>
                         </div>
